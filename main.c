@@ -45,6 +45,13 @@ void setup_interrupts() {
     sei(); // Enable global interrupts
 }
 
+ISR(TIMER0_COMP_vect) {
+    // Timer interrupt service routine
+    // This function will be called every time the timer reaches the compare value
+    // You can add code here to perform periodic tasks
+    print_message("Timer interrupt triggered");
+}
+
 int main(){
 
     // Add your code here and press Ctrl + Shift + B to build
