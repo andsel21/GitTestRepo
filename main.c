@@ -6,6 +6,20 @@
  */
 #include <avr/io.h>
 #include <util/delay.h>
+#include <stdio.h>
+
+void print_message(const char *message) {
+    // Function to print a message to the console or display
+    // Implementation depends on the specific hardware and libraries used
+    if (message != NULL) {
+        // Print the message (this is a placeholder, actual implementation may vary)
+        // For example, you might use UART or another communication protocol
+        printf("%s\n", message);
+    }
+
+}
+
+
 
 int main(){
 
@@ -18,7 +32,7 @@ int main(){
      int c = a + b;
 
 
-        
+    //Lets add some new functionality to the code    
 
     }
 
