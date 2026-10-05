@@ -45,6 +45,14 @@ void setup_interrupts() {
     sei(); // Enable global interrupts
 }
 
+void setup() {
+    // Function to set up the microcontroller
+    // Implementation depends on the specific hardware and libraries used
+    setup_timer();
+    setup_interrupts();
+}
+
+
 int main(){
 
     // Add your code here and press Ctrl + Shift + B to build
