@@ -4,10 +4,14 @@
  * @date 2026-10-05
  * @brief Main function
  */
+
+#define F_CPU 49152000UL // Define the CPU frequency (in Hz) for delay calculations 
+
 #include <avr/io.h>
 #include <util/delay.h>
 #include <stdio.h>
 #include <avr/interrupt.h>
+
 
 void print_message(const char *message) {
     // Function to print a message to the console or display
