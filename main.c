@@ -19,6 +19,16 @@ void print_message(const char *message) {
 
 }
 
+void blink_led(int pin, int delay_ms) {
+    // Function to blink an LED connected to the specified pin
+    // Implementation depends on the specific hardware and libraries used
+    DDRB |= (1 << pin); // Set the pin as output
+    while (1) {
+        PORTB ^= (1 << pin); // Toggle the LED state
+        _delay_ms(delay_ms);  // Wait for the specified delay
+    }
+}
+
 
 
 int main(){
