@@ -7,6 +7,7 @@
 #include <avr/io.h>
 #include <util/delay.h>
 #include <stdio.h>
+#include <avr/interrupt.h>
 
 void print_message(const char *message) {
     // Function to print a message to the console or display
@@ -27,6 +28,15 @@ void blink_led(int pin, int delay_ms) {
         PORTB ^= (1 << pin); // Toggle the LED state
         _delay_ms(delay_ms);  // Wait for the specified delay
     }
+}
+
+void setup_timer() {
+    // Function to set up a timer for periodic tasks
+    // Implementation depends on the specific hardware and libraries used
+    TCCR0 = (1 << WGM01); // Set timer to CTC mode
+    OCR0 = 249;           // Set compare value for 1ms at 16MHz with prescaler 64
+    TIMSK |= (1 << OCIE0); // Enable Timer Compare Interrupt
+    TCCR0 |= (1 << CS01) | (1 << CS00); // Start timer with prescaler 64
 }
 
 
