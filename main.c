@@ -45,6 +45,14 @@ void setup_interrupts() {
     sei(); // Enable global interrupts
 }
 
+void setup() {
+    // Function to set up the microcontroller
+    // Implementation depends on the specific hardware and libraries used
+    setup_timer();
+    setup_interrupts();
+}
+
+
 ISR(TIMER0_COMP_vect) {
     // Timer interrupt service routine
     // This function will be called every time the timer reaches the compare value
