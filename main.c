@@ -64,6 +64,13 @@ ISR(TIMER0_COMP_vect) {
     print_message("Timer interrupt triggered");
 }
 
+
+void addedAnotherFunction() {
+    // This is a new function added to the code
+    // You can implement any functionality you need here
+    print_message("This is a new function added to the code.");
+}
+
 int main(){
 
     // Add your code here and press Ctrl + Shift + B to build
