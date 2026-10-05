@@ -39,7 +39,11 @@ void setup_timer() {
     TCCR0 |= (1 << CS01) | (1 << CS00); // Start timer with prescaler 64
 }
 
-
+void setup_interrupts() {
+    // Function to set up interrupts
+    // Implementation depends on the specific hardware and libraries used
+    sei(); // Enable global interrupts
+}
 
 int main(){
 
