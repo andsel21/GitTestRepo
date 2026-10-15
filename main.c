@@ -60,6 +60,12 @@ void andreFunc(){
     printf("kommer fra andreFunc \n");
 }
 
+
+void changedAfunction(){
+    printf("changedAfunction\n");
+}
+
+
 ISR(TIMER0_COMP_vect) {
     // Timer interrupt service routine
     // This function will be called every time the timer reaches the compare value
@@ -68,11 +74,7 @@ ISR(TIMER0_COMP_vect) {
 }
 
 
-void addedAnotherFunction() {
-    // This is a new function added to the code
-    // You can implement any functionality you need here
-    print_message("This is a new function added to the code.");
-}
+
 
 int main(){
 
