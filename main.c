@@ -56,6 +56,16 @@ void setup() {
     setup_interrupts();
 }
 
+typedef struct {
+	uint8_t RAW_x_axis;
+	uint8_t RAW_y_axis;
+	uint8_t RAW_x_joypad;
+	uint8_t RAW_y_joypad;
+	int16_t scaled_x_axis;
+	int16_t scaled_y_axis;
+	int16_t scaled_x_joypad;
+	int16_t scaled_y_joypad;
+}joystick_io_t;
 
 ISR(TIMER0_COMP_vect) {
     // Timer interrupt service routine
