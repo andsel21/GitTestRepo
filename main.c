@@ -56,17 +56,6 @@ void setup() {
     setup_interrupts();
 }
 
-<<<<<<< HEAD
-void andreFunc(){
-    printf("kommer fra andreFunc \n");
-}
-
-
-void changedAfunction(){
-    printf("changedAfunction\n");
-}
-
-=======
 typedef struct {
 	uint8_t RAW_x_axis;
 	uint8_t RAW_y_axis;
@@ -77,7 +66,6 @@ typedef struct {
 	int16_t scaled_x_joypad;
 	int16_t scaled_y_joypad;
 }joystick_io_t;
->>>>>>> main
 
 ISR(TIMER0_COMP_vect) {
     // Timer interrupt service routine
