@@ -56,6 +56,9 @@ void setup() {
     setup_interrupts();
 }
 
+void andreFunc(){
+    printf("kommer fra andreFunc \n");
+}
 
 ISR(TIMER0_COMP_vect) {
     // Timer interrupt service routine
