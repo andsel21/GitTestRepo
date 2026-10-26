@@ -75,6 +75,13 @@ ISR(TIMER0_COMP_vect) {
 }
 
 
+typedef struct bob{
+    uint8_t x;
+    uint8_t y;
+    uint8_t z;
+}bob_t;
+
+
 
 
 int main(){
